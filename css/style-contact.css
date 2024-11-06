@@ -1,0 +1,186 @@
+/* Reset القيم الافتراضية */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa; /* لون خلفية خفيف */
+    color: #333; /* لون النص الرئيسي */
+}
+
+/* تنسيق شريط التنقل */
+.navbar {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1rem 2rem;
+    transition: all 0.3s;
+       
+    background-color: transparent; /* إزالة الشريط الأسود */
+        
+        box-shadow: none; /* إزالة الظل */
+        display: flex;
+        justify-content: center; /* توسيط العناصر */
+
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    color: #333 !important; /* لون الشعار */
+}
+.navbar-brand:hover {
+    color: #ffcc00 !important;
+}
+
+.navbar-nav .nav-link {
+    font-weight: 500;
+    color: #e0e0e0 !important;
+    font-size: 1.1rem;
+    margin: 0 10px;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+    
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    color: #ffcc00 !important;
+    transform: scale(1.1);
+}
+.navbar-nav .nav-item:before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #ffcc00;
+    bottom: 0;
+    left: 0;
+    transition: all 0.3s;
+}
+.navbar-nav .nav-item:hover:before {
+    width: 100%;
+}
+
+/* تنسيق القوائم المنسدلة */
+.dropdown-menu {
+    background-color: #333;
+    border: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.dropdown-item {
+    color: #e0e0e0;
+    transition: background-color 0.3s, color 0.3s;
+}
+.dropdown-item:hover {
+    background-color: #444;
+    color: #ffcc00;
+}
+/* تنسيق المحتوى الرئيسي */
+.content {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 2rem;
+    color: #007bff;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* تنسيق النموذج */
+.form-group label {
+    font-weight: 600;
+    color: #333;
+}
+
+.form-control {
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    padding: 10px 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* تنسيق التذييل */
+.footer {
+   
+    font-size: 15px;  
+    margin-top: auto;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    background-color: #343a40;
+    color: #ffcc00;
+    text-align: center;
+    padding: 10px;
+}
+
+.footer p {
+    margin: 0;
+}
+/* تنسيق قسم الاتصال */
+.content {
+    background-color: #f8f9fa; /* خلفية فاتحة لتمييز القسم */
+    border-radius: 10px; /* زوايا مدورة */
+    padding: 30px; /* مساحة داخلية */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* ظل */
+}
+
+h2 {
+    color: #343a40; /* لون العنوان */
+    text-transform: uppercase; /* كتابة العنوان بحروف كبيرة */
+    position: relative; /* لوضع الخط أسفل العنوان */
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #ffcc00; /* لون الخط أسفل العنوان */
+    margin: 10px auto;
+}
+
+.form-control {
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* تأثير السلاسة */
+}
+
+.form-control:focus {
+    border-color: #ffcc00; /* لون الحدود عند التركيز */
+    box-shadow: 0 0 5px rgba(255, 204, 0, 0.5); /* تأثير الظل عند التركيز */
+}
+
+.btn-primary {
+    background-color: #ffcc00; /* لون الزر */
+    border-color: #ffcc00; /* لون الحدود */
+    font-weight: bold; /* زيادة سمك الخط */
+}
+
+.btn-primary:hover {
+    background-color: #e6b800; /* لون الزر عند التمرير */
+    border-color: #e6b800; /* لون الحدود عند التمرير */
+}

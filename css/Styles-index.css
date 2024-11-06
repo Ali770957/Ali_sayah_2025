@@ -1,0 +1,387 @@
+ /* تنسيق الصفحة بالكامل */
+ body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f4f4f9;
+    margin: 0;
+    background-color: #f8f9fa; /* خلفية خفيفة */
+    color: #343a40; /* لون النص */
+}
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* الهيكل الأساسي لجعل التذييل في الأسفل */
+.wrapper {
+    flex: 1;
+    background-color: #f8f9fa; /* خلفية فاتحة */
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.navbar {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: transparent; /* إزالة الشريط الأسود */
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: center; /* توسيط العناصر */
+}
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #f7f7f7 !important;
+    transition: color 0.3s ease;
+}
+.navbar-brand:hover {
+    color: #ffcc00 !important;
+}
+
+/* تنسيق الروابط في الناف بار */
+.navbar-nav .nav-link {
+    color: #e0e0e0 !important;
+    font-size: 1.1rem;
+    margin: 0 10px;
+    transition: color 0.3s, transform 0.3s;
+}
+.navbar-nav .nav-link:hover {
+    color: #ffcc00 !important;
+    /*transform: scale(1.1);*/
+}
+.navbar-toggler {
+    border: none;
+}
+.navbar-toggler-icon {
+    background-color: #ffcc00;
+}
+
+/* تأثيرات القوائم */
+.dropdown-menu {
+    background-color: #333;
+    border: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.dropdown-item {
+    color: #e0e0e0;
+    transition: background-color 0.3s, color 0.3s;
+}
+.dropdown-item:hover {
+    background-color: #444;
+    color: #ffcc00;
+}
+
+/* تأثيرات عند التمرير */
+.navbar.scrolled {
+    background-color: #222;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* إضافة لمسة إبداعية */
+.navbar-nav .nav-item:before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #ffcc00;
+    bottom: 0;
+    left: 0;
+    transition: all 0.3s;
+}
+.navbar-nav .nav-item:hover:before {
+    width: 100%;
+}
+/* تنسيق العنوان */
+.header {
+    background: linear-gradient(135deg, #daf108 0%, #6a11cb 100%);
+    color: white;
+}
+
+/* تنسيق الأزرار */
+.btn-outline-light:hover {
+    background-color: #fff;
+    color: #007bff;
+}
+.skills-section {
+  background: #f4f4f9; /* خلفية خفيفة لإبراز المحتوى */
+  padding: 50px 0; /* تباعد أعلى وأسفل */
+ }
+
+/* تنسيق قسم المهارات */
+.skills-section h2 {
+   
+    margin-bottom: 20px;
+    text-align: center;
+    
+    text-transform: uppercase; /* تحويل النصوص إلى حروف كبيرة */
+    font-size: 2rem; /* تكبير حجم الخط */
+    letter-spacing: 2px; /* مسافة بين الحروف */
+    border-bottom: 6px solid #007bff; /* خط سفلي */
+    display: inline-block; /* لجعل الخط تحت النص فقط */
+    padding-bottom: 10px;
+   
+    color: #ffcc00; /* اللون المفضل لديك */
+    margin-bottom: 30px;
+}
+
+.skills-section .row {
+    justify-content: center;
+}
+
+.card {
+    
+    border: none; /* إزالة الحدود الافتراضية */
+    border-radius: 15px; /* حواف دائرية */
+    transition: transform 0.3s; /* تأثير التحول */
+}
+
+.card:hover {
+    
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05); /* تكبير الكارد عند التمرير عليه */
+
+}
+
+
+/* تنسيق تذييل الصفحة */
+.footer {
+    font-size: 15px;  
+    margin-top: auto;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    background-color: #343a40;
+    color: #ffcc00;
+    text-align: center;
+    padding: 10px;
+}
+/* تنسيق البطاقات */
+.skill-card {
+  border: none; /* إزالة حدود البطاقة */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* تأثيرات الانتقال */
+  transform: translateY(-5px); /* رفع البطاقة عند التمرير */
+ box-shadow: 0 8px 16px rgba(0, 123, 255, 0.2); /* إضافة ظل */
+ border-radius: 25px; /* حواف دائرية للصورة */
+
+}
+
+.skill-card:hover {
+ transform: translateY(-5px); /* رفع البطاقة عند التمرير */
+ box-shadow: 0 8px 16px rgba(0, 123, 255, 0.2); /* إضافة ظل */
+}
+.skill-card .card-body {
+padding: 30px; /* توسيع المسافة داخل البطاقة */
+}
+.skill-card .card-title {
+font-size: 1.3rem; /* تكبير حجم عنوان البطاقة */
+color: #ffcc00; /* لون النص الأساسي */
+margin-bottom: 15px; /* تباعد أسفل العنوان */
+font-weight: 600; /* سمك الخط */
+}
+.card-title {
+    font-size: 1.5rem; /* حجم خط العنوان */
+    margin-bottom: 15px;
+    color: #ffcc00;
+}
+.card-text {
+    font-size: 1rem; /* حجم الخط للنص */
+       color: #ffcc00;
+}
+.nav-link {
+    color: #007bff; /* لون الروابط */
+    text-decoration: none; /* إزالة خط التسطير */
+}
+.nav-link:hover {
+    text-decoration: underline; /* إضافة خط التسطير عند التمرير */
+}
+.skill-card .card-text {
+color: #ffcc00; /* لون نص الوصف */
+font-size: 1rem; /* حجم الخط للوصف */
+line-height: 1.6; /* تباعد بين الأسطر */
+}
+#skills-section {
+    display: flex;
+    align-items: center;
+}
+
+.left-image,
+.right-image {
+    width: 500px; /* يمكنك تعديل العرض حسب الحاجة */
+}
+
+.skills-content {
+    max-width: 1500px;
+}
+
+
+.carousel {
+    position: relative;
+    max-width: 600px;
+    margin: auto;
+    overflow: hidden;
+    width: 50%; /* يمكنك تعديل العرض حسب الحاجة */
+    margin-top: 30px; /* مسافة من الأعلى */
+    
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease;
+    
+    
+    
+}
+
+.carousel-images img {
+    width: 100%;
+    display: block;
+    
+  
+}
+
+
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(216, 213, 213, 0.7);
+    border: none;
+    cursor: pointer;
+    padding: 15px;
+    z-index: 100;
+    
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+  right:10px;
+}
+/* تنسيق الأزرار للتمرير */
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 123, 255, 0.7); /* لون خلفية نصف شفاف */
+    color: #fff; /* لون النص */
+    border: none;
+    cursor: pointer;
+    padding: 15px 20px;
+    border-radius: 50%; /* شكل دائري للزر */
+    font-size: 1.5rem; /* تكبير حجم الأيقونة */
+    transition: background-color 0.3s, transform 0.3s; /* تأثيرات الانتقال */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* ظل للزر */
+    z-index: 100;
+}
+
+button.prev:hover, button.next:hover {
+    background-color: #0056b3; /* لون غامق عند التمرير */
+    transform: translateY(-50%) scale(1.1); /* تكبير بسيط */
+   
+    
+}
+
+button.prev:active, button.next:active {
+    transform: translateY(-50%) scale(0.95); /* تصغير خفيف عند الضغط */
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+/* تنسيق الهيدر */
+.header {
+    background: linear-gradient(135deg, #007bff 0%, #6a11cb 100%); /* خلفية متدرجة */
+    padding: 10px 0;
+    text-align: center;
+    color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* ظل للهيدر */
+}
+
+.navbar {
+    
+    padding: 1rem 2rem;
+    transition: all 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
+    background-color: transparent; /* إزالة الشريط الأسود */
+        padding: 1rem 2rem;
+        box-shadow: none; /* إزالة الظل */
+        display: flex;
+        justify-content: center; /* توسيط العناصر */
+}
+
+/* تغيير ألوان الروابط عند المرور */
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #f8f9fa;
+    background-color: #555;
+    border-radius: 5px;
+}
+.navbar.scrolled {
+    background-color: #222;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    
+    color: #333 !important; /* لون الشعار */
+}
+.navbar-brand:hover {
+    color: #ffcc00 !important;
+}
+.navbar-toggler {
+    border: none;
+}
+.navbar-toggler-icon {
+    background-color: #ffcc00;
+}
+
+/* تنسيق الروابط في الناف بار */
+.navbar-nav .nav-link {
+    color: #e0e0e0 !important;
+    font-size: 1.1rem;
+    margin: 0 10px;
+    transition: color 0.3s, transform 0.3s;
+}
+.navbar-nav .nav-link:hover {
+    color: #ffcc00 !important;
+    transform: scale(1.1);
+}
+.navbar-nav .nav-item:before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #ffcc00;
+    bottom: 0;
+    left: 0;
+    transition: all 0.3s;
+}
+.navbar-nav .nav-item:hover:before {
+    width: 100%;
+}
+
+/* تنسيق القوائم المنسدلة */
+.dropdown-menu {
+    background-color: #333;
+    border: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.dropdown-item {
+    color: #e0e0e0;
+    transition: background-color 0.3s, color 0.3s;
+}
+.dropdown-item:hover {
+    background-color: #444;
+    color: #ffcc00;
+}

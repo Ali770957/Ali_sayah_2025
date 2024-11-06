@@ -1,0 +1,249 @@
+/* إعدادات الحاوية العامة */
+.container {
+    max-width: 1200px; /* عرض الحاوية */
+    margin: auto; /* توسيط الحاوية */
+    padding: 20px; /* مسافة داخلية */
+}
+
+/* إعدادات العنوان */
+h2 {
+    font-family: 'Arial', sans-serif; /* نوع الخط */
+    font-size: 2.5rem; /* حجم الخط */
+    
+    margin-bottom: 30px; /* مسافة أسفل العنوان */
+    text-transform: uppercase; /* تحويل النص إلى حروف كبيرة */
+    position: relative; /* للوضع النسبي */
+    color: #ffcc00; /* تغيير اللون إلى #ffcc00 */
+}
+h2::after {
+    content: ''; /* خط أسفل العنوان */
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #007bff;
+    margin: 10px auto;
+}
+
+/* تنسيق الكروت */
+.card {
+    cursor: pointer;
+    margin-bottom: 50px; /* مسافة بين الكروت */
+    position: relative; /* لضبط z-index */
+    overflow: hidden; /* لإخفاء الزوائد */
+    border: none; /* إزالة الحدود */
+    border-radius: 20px; /* زوايا مدورة */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.row > .col-md-4 {
+    padding: 10px; /* مسافة حول الكروت */
+}
+.card:hover {
+    transform: translateY(-5px); /* تحريك بسيط عند التمرير */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* إضافة ظل */
+}
+
+/* تنسيق النص داخل الكروت */
+.card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #007bff;
+}
+.card-text {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* إعدادات زر "عرض المشروع" */
+.btn-primary {
+    
+    border: none;
+    border-radius: 15px;
+    padding: 10px 15px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    background-color: #ffcc00; /* تغيير خلفية الزر */
+    border-color: #ffcc00; /* تغيير حدود الزر */
+}
+.btn-primary:hover {
+    
+    background-color: #ffcc00; /* تغيير خلفية الزر */
+    border-color: #ffcc00; /* تغيير حدود الزر */
+}
+
+/* إعدادات زر "عرض المزيد" */
+.btn-link {
+    color: #ffcc00; /* تغيير لون النص في الروابط */
+    text-decoration: underline;
+    cursor: pointer;
+}
+.btn-link:hover {
+    color: #0056b3;
+}
+
+/* حركة الصورة عند التمرير */
+.card .card-img-top {
+    transition: transform 0.3s ease;
+    height: 200px;
+    object-fit: cover;
+}
+.card.zoom .card-img-top {
+    transform: scale(1.1); /* تكبير بنسبة 10% */
+    z-index: 1;
+}
+.card-img-top.zoom {
+    transform: scale(1.2); /* تكبير إضافي */
+}
+
+/* إعدادات شريط التنقل */
+.navbar-brand {
+    font-size: 1.5rem;
+    color: #fff !important;
+}
+.navbar-nav .nav-link {
+    color: #ffcc00 !important; /* تغيير لون الروابط في شريط التنقل */
+
+}
+.navbar-nav .nav-link:hover {
+    color: #fff !important; /* تغيير لون الرابط عند المرور */
+}
+
+/* إعدادات الفوتر */
+.footer  {
+    font-size: 0.9rem;  
+    margin-top: auto;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    background-color: #343a40;
+    color: #ffcc00;
+    text-align: center;
+    padding: 10px;
+}
+
+
+/* تنسيق شريط التنقل والظل */
+.navbar {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: transparent; /* إزالة الشريط الأسود */
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: center; /* توسيط العناصر */
+}
+
+/* تغيير ألوان الروابط عند المرور */
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #f8f9fa;
+    background-color: #555;
+    border-radius: 5px;
+}
+.navbar.scrolled {
+    background-color: #222;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    
+    color: #333 !important; /* لون الشعار */
+}
+.navbar-brand:hover {
+    color: #ffcc00 !important;
+}
+.navbar-toggler {
+    border: none;
+}
+.navbar-toggler-icon {
+    background-color: #ffcc00;
+}
+
+/* تنسيق الروابط في الناف بار */
+.navbar-nav .nav-link {
+    color: #e0e0e0 !important;
+    font-size: 1.1rem;
+    margin: 0 10px;
+    transition: color 0.3s, transform 0.3s;
+}
+.navbar-nav .nav-link:hover {
+    color: #ffcc00 !important;
+    transform: scale(1.1);
+}
+.navbar-nav .nav-item:before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #ffcc00;
+    bottom: 0;
+    left: 0;
+    transition: all 0.3s;
+}
+.navbar-nav .nav-item:hover:before {
+    width: 100%;
+}
+
+/* تنسيق القوائم المنسدلة */
+.dropdown-menu {
+    background-color: #333;
+    border: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.dropdown-item {
+    color: #e0e0e0;
+    transition: background-color 0.3s, color 0.3s;
+}
+.dropdown-item:hover {
+    background-color: #444;
+    color: #ffcc00;
+}
+.section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #343a40; /* لون النص */
+    text-transform: uppercase; /* جعل النص كبير */
+    margin-bottom: 20px;
+}
+
+.project-card {
+    background: #ffffff; /* لون خلفية البطاقة */
+    border-radius: 15px; /* زوايا مدورة */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); /* ظل */
+    overflow: hidden; /* قص المحتوى الزائد */
+    transition: transform 0.3s; /* تأثير التحرك */
+}
+
+.project-card:hover {
+    transform: translateY(-5px); /* تأثير عند التمرير */
+}
+
+.project-image {
+    width: 100%; /* عرض الصورة بالكامل */
+    height: 200px; /* ارتفاع الصورة */
+    object-fit: cover; /* ضبط الصورة بشكل جيد */
+}
+
+.project-details {
+    padding: 15px;
+}
+
+.project-details h5 {
+    font-size: 1.5rem; /* حجم عنوان المشروع */
+    color: #343a40; /* لون عنوان المشروع */
+}
+
+.project-details p {
+    color: #555; /* لون النص */
+    line-height: 1.5; /* ارتفاع السطر */
+}
+
+.btn-primary {
+    background-color: #ffcc00; /* لون خلفية الزر */
+    border-color: #ffcc00; /* لون الحدود */
+}
+
+.btn-primary:hover {
+    background-color: #e6b800; /* لون الزر عند التمرير */
+    border-color: #e6b800; /* لون الحدود عند التمرير */
+}
